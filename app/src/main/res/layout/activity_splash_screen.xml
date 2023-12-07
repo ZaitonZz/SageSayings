@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splashscree"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0E1BB">
+
+
+    <TextView
+        android:id="@+id/sage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-65sp"
+        android:text="@string/sage"
+        android:textAppearance="@style/sage"
+        app:layout_constraintStart_toStartOf="@+id/sayings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sayings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-65sp"
+        android:text="@string/sayings"
+        android:textAppearance="@style/sayings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sage" />
+
+    <TextView
+        android:id="@+id/by_philip_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="11sp"
+        android:text="@string/by_philip_c"
+        android:textAppearance="@style/by_philip_c"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/scroll"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+
+
+        android:layout_marginTop="48dp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sayings"
+        app:srcCompat="@drawable/scroll" />
+</androidx.constraintlayout.widget.ConstraintLayout>

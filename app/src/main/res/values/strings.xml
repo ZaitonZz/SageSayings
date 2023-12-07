@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SageSayings</string>
+    <string name="by_philip_c"> BY PHILIP CANDELARIO </string>
+    <string name="sage">Sage</string>
+    <string name="sayings">Sayings</string>
+
+</resources>

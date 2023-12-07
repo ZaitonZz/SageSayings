@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="by_philip_c">
+        <item name="android:textSize">8sp</item>
+        <item name="android:letterSpacing">0.38</item>
+        <item name="android:textColor">#3C6255</item>
+    </style>
+
+    <style name="sayings">
+        <item name="android:textSize">64sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#3B6658</item>
+    </style>
+
+    <style name="sage">
+        <item name="android:textSize">64sp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textColor">#3B6658</item>
+    </style>
+</resources>
