@@ -19,7 +19,6 @@
         <path
             android:pathData="M7 2H37C39.7614 2 42 4.23858 42 7V32C42 34.7614 39.7614 37 37 37H7C4.23858 37 2 34.7614 2 32V7C2 4.23858 4.23858 2 7 2Z"
             android:strokeWidth="4"
-            android:strokeJoin="round"
             android:strokeColor="#3B6658"
             />
     </group>

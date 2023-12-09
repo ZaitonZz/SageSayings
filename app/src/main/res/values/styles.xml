@@ -24,6 +24,12 @@
         <item name="android:textColor">#30423C</item>
     </style>
 
+    <style name="proverbs_audio">
+        <item name="android:textSize">64sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#30423C</item>
+    </style>
+
     <style name="chapter_small_read">
         <item name="android:textSize">46sp</item>
         <item name="android:letterSpacing">0.01</item>
@@ -40,6 +46,18 @@
         <item name="android:textSize">64sp</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="chapter_selected">
+        <item name="android:textSize">32sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="chapter_unselected">
+            <item name="android:textSize">32sp</item>
+            <item name="android:letterSpacing">0.01</item>
+            <item name="android:textColor">#000000</item>
     </style>
 
 </resources>
