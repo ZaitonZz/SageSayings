@@ -60,4 +60,22 @@
             <item name="android:textColor">#000000</item>
     </style>
 
+    <style name="vot">
+            <item name="android:textSize">43sp</item>
+            <item name="android:letterSpacing">0.01</item>
+            <item name="android:textColor">#30423C</item>
+    </style>
+
+    <style name="vot_chapter">
+            <item name="android:textSize">32sp</item>
+            <item name="android:letterSpacing">0.01</item>
+            <item name="android:textColor">#30423C</item>
+    </style>
+
+    <style name="vot_verse">
+            <item name="android:textSize">13sp</item>
+            <item name="android:letterSpacing">0.02</item>
+            <item name="android:textColor">#000000</item>
+    </style>
+
 </resources>

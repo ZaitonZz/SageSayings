@@ -2,20 +2,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/audioscreen"
+    android:id="@+id/verseOfTheDay"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E4E6E3"
     android:clipToOutline="true">
 
     <View
-        android:id="@+id/audio_navrec"
+        android:id="@+id/vot_navbar_rect"
         android:layout_width="match_parent"
         android:layout_height="81dp"
+        android:layout_marginTop="655dp"
         android:background="#3C6255"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/vot_roundedbg"
@@ -26,160 +26,27 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/ellipse_"
+        android:id="@+id/ellipse_2"
         android:layout_width="51dp"
         android:layout_height="51dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/selected_circle"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintStart_toStartOf="@+id/imageView4" />
+        app:layout_constraintEnd_toEndOf="@+id/vot_votIcon"
+        app:layout_constraintStart_toStartOf="@+id/vot_votIcon" />
 
     <ImageView
-        android:id="@+id/read_search2"
+        android:id="@+id/audio_search2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="54dp"
         android:layout_marginBottom="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/read_vot2"
+        app:layout_constraintStart_toEndOf="@+id/vot_votIcon"
         app:srcCompat="@drawable/search_unselected" />
 
     <ImageView
-        android:id="@+id/read_vot2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:srcCompat="@drawable/sunrise_unselected" />
-
-    <TextView
-        android:id="@+id/proverbs3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/playfairdisplayregular"
-        android:gravity="center_vertical"
-        android:lineSpacingExtra="-44sp"
-        android:text="@string/proverbs"
-        android:textAppearance="@style/proverbs_audio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RelativeLayout
-        android:id="@+id/chapter_caro"
-        android:layout_width="301dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="60dp"
-        android:background="#E4E6E3"
-        android:clipToOutline="true"
-        app:layout_constraintEnd_toEndOf="@+id/vot_roundedbg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/proverbs3">
-
-        <TextView
-            android:id="@+id/currentChap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="144dp"
-            android:layout_marginTop="14dp"
-            android:fontFamily="@font/bebasneueregular"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="-18sp"
-            android:text="1"
-            android:textAppearance="@style/chapter_selected" />
-
-        <TextView
-            android:id="@+id/one_chap_e"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="175dp"
-            android:layout_marginTop="14dp"
-            android:alpha="0.5"
-            android:fontFamily="@font/bebasneueregular"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="-18sp"
-            android:text="2"
-            android:textAppearance="@style/chapter_unselected" />
-
-        <TextView
-            android:id="@+id/two_chap_e"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="206dp"
-            android:layout_marginTop="14dp"
-            android:alpha="0.5"
-            android:fontFamily="@font/bebasneueregular"
-            android:gravity="center_vertical"
-            android:lineSpacingExtra="-18sp"
-            android:text="3"
-            android:textAppearance="@style/chapter_unselected" />
-
-    </RelativeLayout>
-
-    <View
-        android:id="@+id/audio_chaprec"
-        android:layout_width="36dp"
-        android:layout_height="51dp"
-        android:background="@drawable/audio_chaprec"
-        app:layout_constraintBottom_toBottomOf="@+id/chapter_caro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/chapter_caro" />
-
-    <ImageView
-        android:id="@+id/audio_next_chapter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/audio_play"
-        app:layout_constraintEnd_toEndOf="@+id/proverbs3"
-        app:layout_constraintTop_toTopOf="@+id/audio_play"
-        app:srcCompat="@drawable/skip_end_circle" />
-
-    <ImageView
-        android:id="@+id/audio_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toStartOf="@+id/audio_next_chapter"
-        app:layout_constraintStart_toEndOf="@+id/audio_prev_chapter"
-        app:layout_constraintTop_toBottomOf="@+id/chapter_caro"
-        app:srcCompat="@drawable/play_circle" />
-
-    <ImageView
-        android:id="@+id/audio_prev_chapter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toBottomOf="@+id/audio_play"
-        app:layout_constraintStart_toStartOf="@+id/proverbs3"
-        app:layout_constraintTop_toTopOf="@+id/audio_play"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/skip_start_circle" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:srcCompat="@drawable/audio_selected" />
-
-    <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/audio_book2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -188,5 +55,88 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/book_unselected" />
 
+    <TextView
+        android:id="@+id/vot_vot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-37sp"
+        android:text="@string/vot"
+        android:textAppearance="@style/vot"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="300dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/line_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vot_vot" />
+
+    <TextView
+        android:id="@+id/vot_chapter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/playfairdisplayregular"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="-23sp"
+        android:text="Proverbs 1:1"
+        android:textAppearance="@style/vot_chapter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_1" />
+
+    <TextView
+        android:id="@+id/vot_verse"
+        android:layout_width="266dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="5sp"
+        android:text="@string/lorem_ipsum"
+        android:textAppearance="@style/vot_verse"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vot_daily_image" />
+
+    <ImageView
+        android:id="@+id/vot_daily_image"
+        android:layout_width="375dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="18dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vot_chapter"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/vot_votIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/vot_audio"
+        app:srcCompat="@drawable/sunrise_selected" />
+
+    <ImageView
+        android:id="@+id/vot_audio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/audio_book2"
+        app:srcCompat="@drawable/audio_unselected" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

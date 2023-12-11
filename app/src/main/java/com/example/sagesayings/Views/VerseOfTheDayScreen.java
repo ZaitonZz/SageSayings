@@ -1,4 +1,4 @@
-package com.example.sagesayings;
+package com.example.sagesayings.Views;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.sagesayings.R;
 
 public class VerseOfTheDayScreen extends AppCompatActivity {
 
