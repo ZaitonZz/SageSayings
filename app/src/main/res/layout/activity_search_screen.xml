@@ -30,7 +30,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:minHeight="48dp"
-        android:text="AutoCompleteTextView"
+        android:text="Search Here..."
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
+        android:background="@drawable/search_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -84,4 +89,157 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/search_vot"
         app:srcCompat="@drawable/search_selected" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardViewLove"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="4dp"
+            android:contextClickable="true"
+            android:focusable="true"
+            app:cardBackgroundColor="#61876E"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="4dp"
+            app:cardMaxElevation="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewDiligent"
+            app:layout_constraintEnd_toStartOf="@+id/cardViewWisdom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/loveCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/love" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewWisdom"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="4dp"
+            android:scaleType="fitXY"
+            app:cardBackgroundColor="#61876E"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewFool"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardViewLove"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/wisdomCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wisdom" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewDiligent"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="3dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#61876E"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewSluggard"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewLove"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardViewLove"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewLove">
+
+            <ImageView
+                android:id="@+id/diligentCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/diligent" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFool"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="3dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#61876E"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/cardViewLife"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewWisdom"
+            app:layout_constraintStart_toStartOf="@+id/cardViewWisdom"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewWisdom">
+
+            <ImageView
+                android:id="@+id/foolCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/fool" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewSluggard"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#61876E"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewDiligent"
+            app:layout_constraintStart_toStartOf="@+id/cardViewDiligent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewDiligent">
+
+            <ImageView
+                android:id="@+id/sluggardCateg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sluggard" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewLife"
+            android:layout_width="163dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true"
+            app:cardBackgroundColor="#61876E"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewFool"
+            app:layout_constraintStart_toStartOf="@+id/cardViewFool"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewFool">
+
+            <ImageView
+                android:id="@+id/lifeCat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/life" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
