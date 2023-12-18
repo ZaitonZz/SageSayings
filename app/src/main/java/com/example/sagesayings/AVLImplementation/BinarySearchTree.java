@@ -52,20 +52,18 @@ public class BinarySearchTree extends BinaryTree {
     
     }
     
-  
-    @Override
-    public boolean isFound(ChapterNode lookingFor, ChapterNode node){
-        return ((searchNode(lookingFor,node) != null ));
+
+    public boolean isFound(int chapterNumber, ChapterNode root){
+        return ((searchNode(chapterNumber ,root) != null ));
     }
-      
-    @Override
-    public ChapterNode searchNode(ChapterNode lookingFor, ChapterNode node){
+
+    public ChapterNode searchNode(int chapterNumber, ChapterNode root){
        
-        if (node==null) return null;
+        if (root==null) return null;
    
-        if(lookingFor.getChapterNumber() < node.getChapterNumber()) return searchNode(lookingFor, node.getLeft());
-        else if (lookingFor.getChapterNumber() > node.getChapterNumber()) return searchNode(lookingFor, node.getRight());
-        else return node;
+        if(chapterNumber < root.getChapterNumber()) return searchNode(chapterNumber, root.getLeft());
+        else if (chapterNumber > root.getChapterNumber()) return searchNode(chapterNumber, root.getRight());
+        else return root;
         
     }
     public ChapterNode delete(ChapterNode t, int key) {

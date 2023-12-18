@@ -12,7 +12,7 @@ public class ChapterNode {
     ChapterNode left;
     ChapterNode right;
     int chapterNumber;
-    AVLVerseTree avlVerseTree;
+    private AVLVerseTree avlVerseTree;
 
 
     public ChapterNode() {
@@ -60,4 +60,11 @@ public class ChapterNode {
     }
 
 
+    public AVLVerseTree getAvlVerseTree() {
+        return avlVerseTree;
+    }
+
+    public void setAvlVerseTree(AVLVerseTree avlVerseTree) {
+        this.avlVerseTree = avlVerseTree;
+    }
 }

@@ -78,5 +78,8 @@ public class AVLChapterTree extends BinarySearchTree{
         return getHeight(node.getLeft()) - getHeight(node.getRight());
     }
 
-    
+
+    public void insert(ChapterNode newNode) {
+        rootNode = insert(rootNode, newNode);
+    }
 }

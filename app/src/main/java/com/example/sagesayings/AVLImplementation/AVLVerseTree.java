@@ -1,5 +1,7 @@
 package com.example.sagesayings.AVLImplementation;
 
+import java.util.Stack;
+
 public class AVLVerseTree {
 
     private VerseNode root;
@@ -105,6 +107,22 @@ public class AVLVerseTree {
             return searchNode(lookingFor, node.getRight());
         } else {
             return null;
+        }
+    }
+
+    public void insert(VerseNode newNode) {
+        root = insert(root, newNode);
+    }
+    public Stack<VerseNode> inOrder(){
+        Stack<VerseNode> verseStack = new Stack<>();
+        inOrderTraverse(root, verseStack);
+        return verseStack;
+    }
+    public void inOrderTraverse(VerseNode root, Stack<VerseNode> stack) {
+        if (root != null) {
+            inOrderTraverse(root.getLeft(), stack); //left
+            stack.add(root); //root
+            inOrderTraverse(root.getRight(), stack); //right
         }
     }
 }

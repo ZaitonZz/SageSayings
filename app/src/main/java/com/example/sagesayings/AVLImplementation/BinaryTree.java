@@ -64,25 +64,7 @@ public class BinaryTree {
             preOrderTraverse(root.getRight()); //right
         }
     }
-    
-    public boolean isFound(ChapterNode lookingFor, ChapterNode node){
-        return searchNode(lookingFor, node) ==  null;
-    }
-    
-    public ChapterNode searchNode(ChapterNode lookingFor, ChapterNode node){
-        if (node ==null) {
-            return null;
-        } 
-        if (lookingFor.getChapterNumber() == node.getChapterNumber()) {
-            return node;
-        } else if (lookingFor.getChapterNumber() != node.getChapterNumber() && node.getLeft() != null) {
-            return searchNode(lookingFor, node.getLeft());
-        } else if (lookingFor.getChapterNumber() != node.getChapterNumber() && node.getRight() != null) {
-            return searchNode(lookingFor, node.getRight());
-        } else {
-            return null;
-        }
-    }
+
     
     public int getHeight(){
         return getHeight(rootNode);

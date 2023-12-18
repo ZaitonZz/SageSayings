@@ -56,4 +56,9 @@ public class VerseNode {
     public void setRight(VerseNode right) {
         this.right = right;
     }
+
+    @Override
+    public String toString() {
+        return verseNumber + ": " + formattedText;
+    }
 }

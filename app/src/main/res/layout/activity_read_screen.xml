@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/chapter_small_read"
+        android:id="@+id/current_chapter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/chapter_big_read"
+        android:id="@+id/read_chapters"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -87,7 +87,7 @@
         android:lineSpacingExtra="5sp"
         android:text="@string/lorem_ipsum"
         android:textAppearance="@style/verses_read"
-        app:layout_constraintStart_toEndOf="@+id/chapter_big_read"
+        app:layout_constraintStart_toEndOf="@+id/read_chapters"
         app:layout_constraintTop_toBottomOf="@+id/proverbs" />
 
     <View
@@ -140,21 +140,21 @@
         app:layout_constraintStart_toEndOf="@+id/read_vot"
         app:srcCompat="@drawable/search_unselected" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/read_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#E4E6E3"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
         app:layout_constraintStart_toEndOf="@+id/rectangle_3"
         app:layout_constraintTop_toTopOf="@+id/rectangle_3"
         app:srcCompat="@drawable/next" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/read_prev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#E4E6E3"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_3"
         app:layout_constraintEnd_toStartOf="@+id/rectangle_3"
         app:layout_constraintTop_toTopOf="@+id/rectangle_3"
