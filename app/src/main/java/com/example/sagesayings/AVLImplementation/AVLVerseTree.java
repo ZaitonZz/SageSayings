@@ -1,5 +1,7 @@
 package com.example.sagesayings.AVLImplementation;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class AVLVerseTree {
@@ -113,16 +115,16 @@ public class AVLVerseTree {
     public void insert(VerseNode newNode) {
         root = insert(root, newNode);
     }
-    public Stack<VerseNode> inOrder(){
-        Stack<VerseNode> verseStack = new Stack<>();
+    public Queue<VerseNode> inOrder(){
+        Queue<VerseNode> verseStack = new LinkedList<>();
         inOrderTraverse(root, verseStack);
         return verseStack;
     }
-    public void inOrderTraverse(VerseNode root, Stack<VerseNode> stack) {
+    public void inOrderTraverse(VerseNode root, Queue<VerseNode> queue) {
         if (root != null) {
-            inOrderTraverse(root.getLeft(), stack); //left
-            stack.add(root); //root
-            inOrderTraverse(root.getRight(), stack); //right
+            inOrderTraverse(root.getLeft(), queue); //left
+            queue.add(root); //root
+            inOrderTraverse(root.getRight(), queue); //right
         }
     }
 }
