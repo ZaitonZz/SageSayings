@@ -3,6 +3,7 @@ package com.example.sagesayings.Views;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.WindowCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -24,4 +25,21 @@ public class AudioScreen extends AppCompatActivity {
 
         rectBg.setLayoutParams(new ViewGroup.LayoutParams(displayMetrics.widthPixels, (int) (displayMetrics.heightPixels * .97)));
     }
+    public void startReadScreen(View view){
+        Intent intent = new Intent(AudioScreen.this, ReadScreen.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
+    }
+    public void startVOTScreen(View view){
+        Intent intent = new Intent(AudioScreen.this, VerseOfTheDayScreen.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
+    }
+    public void startSearchScreen(View view){
+        Intent intent = new Intent(AudioScreen.this, SearchScreen.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+        startActivity(intent);
+    }
+
+    
 }

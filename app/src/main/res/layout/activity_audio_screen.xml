@@ -27,30 +27,34 @@
 
     <View
         android:id="@+id/ellipse_"
-        android:layout_width="51dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="66dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/selected_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/audi_audio"
         app:layout_constraintStart_toStartOf="@+id/audi_audio" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#3C6255"
+        android:onClick="startSearchScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/audio_vot"
         app:srcCompat="@drawable/search_unselected" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_vot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="#3C6255"
+        android:onClick="startVOTScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/audi_audio"
         app:srcCompat="@drawable/sunrise_unselected" />
@@ -169,53 +173,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/chapter_caro" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_next_chapter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="#E3E5E2"
         app:layout_constraintBottom_toBottomOf="@+id/audio_play"
         app:layout_constraintEnd_toEndOf="@+id/proverbs3"
         app:layout_constraintTop_toTopOf="@+id/audio_play"
         app:srcCompat="@drawable/skip_end_circle" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:backgroundTint="#E3E5E2"
         app:layout_constraintEnd_toStartOf="@+id/audio_next_chapter"
         app:layout_constraintStart_toEndOf="@+id/audio_prev_chapter"
         app:layout_constraintTop_toBottomOf="@+id/chapter_caro"
         app:srcCompat="@drawable/play_circle" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_prev_chapter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
+        android:backgroundTint="#E3E5E2"
         app:layout_constraintBottom_toBottomOf="@+id/audio_play"
         app:layout_constraintStart_toStartOf="@+id/proverbs3"
         app:layout_constraintTop_toTopOf="@+id/audio_play"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/skip_start_circle" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audi_audio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#2A473D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/audio_book"
         app:srcCompat="@drawable/audio_selected" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_book"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#3C6255"
+        android:onClick="startReadScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/book_unselected" />
