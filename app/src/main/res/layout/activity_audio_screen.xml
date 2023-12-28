@@ -98,7 +98,7 @@
             android:text="2"
             android:textAppearance="@style/chapter_unselected"
             android:visibility="invisible"
-            app:layout_constraintEnd_toStartOf="@+id/currentChap"
+            app:layout_constraintEnd_toStartOf="@+id/audio_current_chapter"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -118,7 +118,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/currentChap"
+            android:id="@+id/audio_current_chapter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="144dp"
@@ -143,8 +143,10 @@
             android:lineSpacingExtra="-18sp"
             android:text="2"
             android:textAppearance="@style/chapter_unselected"
-            app:layout_constraintStart_toEndOf="@+id/currentChap"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/audio_current_chapter"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
 
         <TextView
             android:id="@+id/two_chap_e"
@@ -158,8 +160,10 @@
             android:lineSpacingExtra="-18sp"
             android:text="3"
             android:textAppearance="@style/chapter_unselected"
+            android:visibility="invisible"
             app:layout_constraintStart_toEndOf="@+id/one_chap_e"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="invisible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -179,6 +183,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="36dp"
         android:backgroundTint="#E3E5E2"
+        android:onClick="nextChapter"
         app:layout_constraintBottom_toBottomOf="@+id/audio_play"
         app:layout_constraintEnd_toEndOf="@+id/proverbs3"
         app:layout_constraintTop_toTopOf="@+id/audio_play"
@@ -190,6 +195,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:backgroundTint="#E3E5E2"
+        android:onClick="toggleAudio"
         app:layout_constraintEnd_toStartOf="@+id/audio_next_chapter"
         app:layout_constraintStart_toEndOf="@+id/audio_prev_chapter"
         app:layout_constraintTop_toBottomOf="@+id/chapter_caro"
@@ -201,6 +207,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:backgroundTint="#E3E5E2"
+        android:onClick="prevChapter"
         app:layout_constraintBottom_toBottomOf="@+id/audio_play"
         app:layout_constraintStart_toStartOf="@+id/proverbs3"
         app:layout_constraintTop_toTopOf="@+id/audio_play"

@@ -13,6 +13,11 @@
         android:theme="@style/Theme.SageSayings"
         tools:targetApi="31">
         <activity
+            android:name=".Views.ResultsScreen"
+            android:exported="true" >
+
+        </activity>
+        <activity
             android:name=".Views.SearchScreen"
             android:exported="false" />
         <activity
@@ -20,11 +25,12 @@
             android:exported="true">
 
         </activity>
-        <activity android:name=".Views.VerseOfTheDayScreen"
-            android:exported="true"/>
+        <activity
+            android:name=".Views.VerseOfTheDayScreen"
+            android:exported="true" />
         <activity
             android:name=".Views.ReadScreen"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".Views.SplashScreen"
             android:exported="true">
@@ -34,6 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

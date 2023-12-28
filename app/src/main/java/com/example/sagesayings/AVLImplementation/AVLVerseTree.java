@@ -93,22 +93,25 @@ public class AVLVerseTree {
         }
     }
 
-    public boolean isFound(VerseNode lookingFor, VerseNode node){
+    public boolean isFound(int lookingFor, VerseNode node){
         return searchNode(lookingFor, node) ==  null;
     }
 
-    public VerseNode searchNode(VerseNode lookingFor, VerseNode node) {
+    public VerseNode searchNode(int lookingFor){
+        return searchNode(lookingFor, root);
+    }
+
+    public VerseNode searchNode(int lookingFor, VerseNode node) {
         if (node == null) {
             return null;
         }
-        if (lookingFor.getVerseNumber() == node.getVerseNumber()) {
-            return node;
-        } else if (lookingFor.getVerseNumber() != node.getVerseNumber() && node.getLeft() != null) {
+
+        if (lookingFor < node.getVerseNumber()) {
             return searchNode(lookingFor, node.getLeft());
-        } else if (lookingFor.getVerseNumber() != node.getVerseNumber() && node.getRight() != null) {
+        } else if (lookingFor > node.getVerseNumber()) {
             return searchNode(lookingFor, node.getRight());
         } else {
-            return null;
+            return node;
         }
     }
 
@@ -127,4 +130,26 @@ public class AVLVerseTree {
             inOrderTraverse(root.getRight(), queue); //right
         }
     }
+
+    public VerseNode findMin(){
+        return findMin(root);
+    }
+
+    public VerseNode findMin(VerseNode root){
+        if(root==null) return null;
+        else if(root.getLeft()==null) return root;
+        return findMin(root.getLeft());
+
+    }
+
+    public VerseNode findMax(){
+        return findMax(root);
+    }
+
+    public VerseNode findMax(VerseNode root){
+        if(root==null) return null;
+        else if(root.getRight()==null) return root;
+        return findMax(root.getRight());
+    }
+
 }

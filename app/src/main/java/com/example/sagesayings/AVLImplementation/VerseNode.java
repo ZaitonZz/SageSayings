@@ -61,4 +61,10 @@ public class VerseNode {
     public String toString() {
         return verseNumber + ": " + formattedText;
     }
+    public VerseNode contains(String query){
+        if (formattedText.toLowerCase().contains(query.toLowerCase()) || metaWords.toLowerCase().contains(query.toLowerCase())){
+            return this;
+        }
+        return null;
+    }
 }

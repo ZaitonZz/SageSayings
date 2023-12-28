@@ -37,8 +37,7 @@ public class ReadScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
+        hideSystemUI();
 
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
         setContentView(R.layout.activity_read_screen);
@@ -140,4 +139,11 @@ public class ReadScreen extends AppCompatActivity {
         }
 
     }
+
+    private void hideSystemUI() {
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
+
 }

@@ -26,30 +26,34 @@
 
     <View
         android:id="@+id/ellipse_2"
-        android:layout_width="51dp"
-        android:layout_height="51dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/selected_circle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/vot_votIcon"
         app:layout_constraintStart_toStartOf="@+id/vot_votIcon" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_search2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#3C6255"
+        android:onClick="startSearchScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/vot_votIcon"
         app:srcCompat="@drawable/search_unselected" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/audio_book2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#3C6255"
+        android:onClick="startReadScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/book_unselected" />
@@ -96,12 +100,13 @@
     <TextView
         android:id="@+id/vot_verse"
         android:layout_width="266dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical"
         android:lineSpacingExtra="5sp"
         android:text="@string/lorem_ipsum"
         android:textAppearance="@style/vot_verse"
+        android:textSize="20sp"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -118,22 +123,25 @@
         app:layout_constraintTop_toBottomOf="@+id/vot_chapter"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/vot_votIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="12dp"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="6dp"
+        android:backgroundTint="#2A473D"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/vot_audio"
         app:srcCompat="@drawable/sunrise_selected" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/vot_audio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="54dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#3C6255"
+        android:onClick="startAudioScreen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/audio_book2"
         app:srcCompat="@drawable/audio_unselected" />
